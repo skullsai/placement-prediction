@@ -1,3 +1,12 @@
+def removeWeirdChars(events):
+    weirdchars='<>'
+    for event in events:
+        for char in weirdchars:
+            if char in event:
+                event=event.replace(char,"")
+    return events
+
+
 def csvToFormat(work_df):
     
     for i in range(len(work_df)):
